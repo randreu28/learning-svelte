@@ -1,7 +1,5 @@
 <!-- src/routes/index.svelte -->
 <script lang="ts">
-	import '../app.css';
-
 	export let data;
 
 	const { toDos } = data;
@@ -14,7 +12,7 @@
 	</p>
 </div>
 <div class="px-5 space-y-5">
-{#each toDos as toDo}
-	<p>{toDo.title}</p>
-{/each}
+	{#each toDos as toDo}
+		<p>{toDo.title}</p>
+	{/each}
 </div>
