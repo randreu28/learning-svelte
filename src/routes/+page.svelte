@@ -13,6 +13,8 @@
 </div>
 <div class="px-5 space-y-5">
 	{#each toDos as toDo}
-		<p>{toDo.title}</p>
+		<p>
+			<a href={'/' + toDo.id}>{toDo.title}</a>
+		</p>
 	{/each}
 </div>
