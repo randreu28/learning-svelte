@@ -1,12 +1,6 @@
 import { error } from '@sveltejs/kit';
+import type { todoType } from '../types';
 import type { PageLoad } from './$types';
-
-interface todoType {
-	userId: number;
-	id: number;
-	title: string;
-	completed: boolean;
-}
 
 export const load = (async ({ fetch }) => {
 	const rawData = await fetch('https://jsonplaceholder.typicode.com/todos');
