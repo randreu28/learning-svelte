@@ -11,7 +11,7 @@ interface todoType {
 export const load = (async ({ fetch }) => {
 	const rawData = await fetch('https://jsonplaceholder.typicode.com/todos');
 
-	if (rawData.ok) {
+	if (!rawData.ok) {
 		throw error(rawData.status);
 	}
 
